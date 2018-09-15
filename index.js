@@ -17,8 +17,10 @@ client.asteroids = new Enmap({name: "asteroids"});
 client.allianceMembers = new Enmap({name: "GuildAllianceMembers"});
 
 //Gimme them keys
+if(process.env.TESTING == 1) { return; } else {
 const contents = fs.readFileSync("./configs/tokens-and-secrets.json");
 const tokens = JSON.parse(contents);
+}
 
 //Custom logger (York this is amazing)
 client.logger = require("./modules/Logger");
@@ -60,7 +62,7 @@ const init = async () => {
   }
 
   // Here we login the client.
-  client.login(tokens.dithcord);
+  if (!process.env.TESTING) client.login(tokens.dithcord);
 
 // End top-level async/await function.
 };
