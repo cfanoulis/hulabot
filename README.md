@@ -1,4 +1,7 @@
 # The Hula bot
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/cfanoulis/hulabot.svg)](https://greenkeeper.io/)
+
 A Deep-Town Discord bot that likes to dance. A lot.
 
 ## What are we using
