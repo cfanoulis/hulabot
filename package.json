@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node . TESTING=1"
+    "lint": "eslint index.js commands/"
+    "snyk": "snyk test"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,9 @@
     "zlib-sync": "^0.1.4"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^2.1.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.5.0",
+    "snyk": "^1.95.0"
   },
   "config": {
     "commitizen": {
