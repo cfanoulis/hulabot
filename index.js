@@ -1,4 +1,4 @@
-console.log("HulaBot is starting")
+console.log("HulaBot is starting");
 
 //Load dependencies
 const Discord = require("discord.js");
@@ -7,14 +7,14 @@ const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 const fs = require("fs");
 
-//Initialise the client and attach the enmaps (evie may god bless you with theese) and config
+//Initialize the client and attach the enmaps (evie may god bless you with theese) and config
 const client = new Discord.Client();
 client.config = require("./configs/config.js");
 client.commands = new Enmap();
 client.aliases = new Enmap();
 client.settings = new Enmap({name: "settings", fetchAll: false, autoFetch: true});
 client.asteroids = new Enmap({name: "asteroids"});
-client.allianceMembers = new Enmap({name: "GuildAllianceMembers", autoFetch: true, fetchAll: false});
+client.allianceMembers = new Enmap({name: "GuildAllianceMembers"});
 
 //Gimme them keys
 const contents = fs.readFileSync("./configs/tokens-and-secrets.json");

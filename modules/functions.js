@@ -1,13 +1,7 @@
-/**
- * @author AnIdiotsGuide
- * @license MIT
- */
 
 module.exports = (client) => {
 
   /*
-  PERMISSION LEVEL FUNCTION
-
   This is a very basic permission system for commands which uses "levels"
   "spaces" are intentionally left black so you can add them if you want.
   NEVER GIVE ANYONE BUT OWNER THE LEVEL 10! By default this can run any
@@ -31,8 +25,6 @@ module.exports = (client) => {
   };
 
   /*
-  GUILD SETTINGS FUNCTION
-
   This function merges the default settings (from config.defaultSettings) with any
   guild override you might have for particular guild. If no overrides are present,
   the default settings are used.
@@ -50,16 +42,8 @@ module.exports = (client) => {
   };
 
   /*
-  SINGLE-LINE AWAITMESSAGE
-
   A simple way to grab a single reply, from the user that initiated
   the command. Useful to get "precisions" on certain things...
-
-  USAGE
-
-  const response = await client.awaitReply(msg, "Favourite Color?");
-  msg.reply(`Oh, I really love ${response} too!`);
-
   */
   client.awaitReply = async (msg, question, limit) => {
     const filter = m => m.author.id === msg.author.id;
@@ -74,8 +58,6 @@ module.exports = (client) => {
 
 
   /*
-  MESSAGE CLEAN FUNCTION
-
   "Clean" removes @everyone pings, as well as tokens, and makes code blocks
   escaped so they're shown more easily. As a bonus it resolves promises
   and stringifies objects!
@@ -135,7 +117,7 @@ module.exports = (client) => {
     return false;
   };
 
-  /* MISCELANEOUS NON-CRITICAL FUNCTIONS */
+  //Checks if the user is in the Guild Alliance
   
   // EXTENDING NATIVE TYPES IS BAD PRACTICE. Why? Because if JavaScript adds this
   // later, this conflicts with native code. Also, if some other lib you use does
@@ -161,8 +143,6 @@ module.exports = (client) => {
   process.on("uncaughtException", (err) => {
     const errorMsg = err.stack.replace(new RegExp(`${__dirname}/`, "g"), "./");
     client.logger.error(`Uncaught Exception: ${errorMsg}`);
-    // Always best practice to let the code crash on uncaught exceptions. 
-    // Because you should be catching them anyway.
     process.exit(1);
   });
 

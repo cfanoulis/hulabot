@@ -5,12 +5,13 @@ module.exports = async (client, message) => {
 
   const settings = message.settings = client.getGuildSettings(message.guild);
 
+  //Mention to get the prefix
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
     return message.reply(`My prefix on this guild is \`${settings.prefix}\``);
   }
 
-
+  //Nope, no prefix - no command
   if (message.content.indexOf(settings.prefix) !== 0) return;
 
   const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
@@ -47,7 +48,7 @@ module.exports = async (client, message) => {
 
   //Guild Alliance Checking (yay!)
   if (cmd.conf.gaOnly === true) {
-    if (!client.allianceMembers.has(message.author.id)) {
+    if (!client.gaCheck) {
       if (settings.systemNotice === "true") {
         return message.channel.send("Sorry, but only Guild Alliance Members have the ability to use this command!\nIf you have been wrongfully denied access to this command, please seek support in our server");
       } else {

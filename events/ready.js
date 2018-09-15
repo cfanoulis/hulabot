@@ -1,7 +1,3 @@
-/**
- * @author AnIdiotsGuide
- * @license MIT
- */
 
 module.exports = async client => {
   // Log that the bot is online.
