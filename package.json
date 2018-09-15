@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https//:gitlab.com/cfanoulis/hulabot.git"
+    "url": "https://gitlab.com/cfanoulis/hulabot.git"
   },
   "keywords": [
     "Deep",
@@ -16,7 +16,7 @@
     "Discord"
   ],
   "author": "Charalampos Fanoulis",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "dependencies": {
     "bufferutil": "^4.0.0",
     "chalk": "^2.3.0",
@@ -27,7 +27,6 @@
     "libsodium-wrappers": "^0.7.3",
     "moment": "^2.20.1",
     "moment-duration-format": "^2.2.0",
-    "mysql-promise": "^4.1.0",
     "mysql2": "^1.6.1",
     "node-fetch": "^2.2.0",
     "node-opus": "^0.3.0",
