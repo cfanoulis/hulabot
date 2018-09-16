@@ -1,11 +1,15 @@
 # The Hula bot
 
 <<<<<<< HEAD
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d155e63b147487a806432160120f207)](https://app.codacy.com/app/cfan/hulabot?utm_source=github.com&utm_medium=referral&utm_content=cfanoulis/hulabot&utm_campaign=Badge_Grade_Settings) [![Greenkeeper badge](https://badges.greenkeeper.io/cfanoulis/hulabot.svg)](https://greenkeeper.io/)
+=======
+<<<<<<< HEAD
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d155e63b147487a806432160120f207)](https://app.codacy.com/app/cfan/hulabot?utm_source=github.com&utm_medium=referral&utm_content=cfanoulis/hulabot&utm_campaign=Badge_Grade_Settings)
 =======
 [![Greenkeeper badge](https://badges.greenkeeper.io/cfanoulis/hulabot.svg)](https://greenkeeper.io/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcfanoulis%2Fhulabot.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcfanoulis%2Fhulabot?ref=badge_shield)
 >>>>>>> 1a0bbabf6d76d8fd86799d2ef5d34f4df72aee87
+>>>>>>> master
 
 A Deep-Town Discord bot that likes to dance. A lot.
 
