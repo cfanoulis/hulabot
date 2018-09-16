@@ -9,7 +9,7 @@ const fs = require("fs");
 
 //Initialize the client and attach the enmaps (evie may god bless you with theese) and config
 const client = new Discord.Client();
-client.config = require("./configs/config.js");
+if (!process.env.TESTING) { client.config = require("./configs/config.js"); };
 client.commands = new Enmap();
 client.aliases = new Enmap();
 client.settings = new Enmap({name: "settings", fetchAll: false, autoFetch: true});
@@ -17,7 +17,7 @@ client.asteroids = new Enmap({name: "asteroids"});
 client.allianceMembers = new Enmap({name: "GuildAllianceMembers"});
 
 //Gimme them keys
-if(process.env.TESTING == 1) { return; } else {
+if(!process.env.TESTING) {
 const contents = fs.readFileSync("./configs/tokens-and-secrets.json");
 const tokens = JSON.parse(contents);
 }
@@ -62,7 +62,8 @@ const init = async () => {
   }
 
   // Here we login the client.
-  if (!process.env.TESTING) client.login(tokens.dithcord);
+  if (process.env.TESTING) return process.exit(0);
+  client.login(tokens.dithcord);
 
 // End top-level async/await function.
 };
