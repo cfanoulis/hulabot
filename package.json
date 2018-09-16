@@ -4,8 +4,8 @@
   "description": "A Deep Town Discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "node . TESTING=1"
-    "lint": "eslint index.js commands/"
+    "test": "node . TESTING=1",
+    "lint": "eslint index.js commands",
     "snyk": "snyk test"
   },
   "repository": {
