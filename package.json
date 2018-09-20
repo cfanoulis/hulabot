@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"I need to fix this I guess\" && exit 0",
-    "lint": "echo \"I need to fix this I guess\" && exit 0"
+    "lint": "echo \"I need to fix this I guess\" && exit 0",
+    "snyk": "echo \"I need to fix this I guess\" && exit 0"
   },
   "repository": {
     "type": "git",
