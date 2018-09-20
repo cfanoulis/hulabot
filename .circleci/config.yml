@@ -11,7 +11,7 @@ jobs:
             - npm-deps-
       - run:
           name: Install FOSSA client
-          command: curl -H 'Cache-Control:no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+          command: curl -H 'Cache-Control:no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash4
       - run:
           name: Install packages
           command: npm install
@@ -19,7 +19,9 @@ jobs:
           name: Upload FOSSA data
           command: fossa
           working_directory: ./
-
+      - run:
+          name: Authenticate to snyk
+          command: snyk auth $SNYK_KEY
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
@@ -68,7 +70,7 @@ jobs:
 
 workflows:
   version: 2
-  test-and-deploy:
+  test:
     jobs:
       - prep
       - lint:
