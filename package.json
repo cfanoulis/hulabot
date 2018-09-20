@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"I need to fix this I guess\" && exit 0",
     "lint": "echo \"I need to fix this I guess\" && exit 0",
-    "snyk": "echo \"I need to fix this I guess\" && exit 0"
+    "snyk": "snyk test && snyk monitor"
   },
   "repository": {
     "type": "git",
