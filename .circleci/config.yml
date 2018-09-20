@@ -21,7 +21,7 @@ jobs:
           working_directory: ./
       - run:
           name: Install the snyk client
-          command: npm install -g snyk
+          command: sudo npm install -g snyk
       - run:
           name: Authenticate to snyk
           command: SNYK_TOKEN=$SNYK-KEY snyk auth
