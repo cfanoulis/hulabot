@@ -24,7 +24,9 @@ jobs:
           command: sudo npm install -g snyk
       - run:
           name: Authenticate to snyk
-          command: SNYK_TOKEN=$SNYK-KEY snyk auth
+          command: snyk auth
+          environment:
+              SNYK_TOKEN: $SNYK_KEY
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
