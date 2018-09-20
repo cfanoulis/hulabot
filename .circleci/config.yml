@@ -21,7 +21,7 @@ jobs:
           working_directory: ./
       - run:
           name: Authenticate to snyk
-          command: snyk auth $SNYK_KEY
+          command: SNYK_TOKEN=$SNYK-KEY snyk auth
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
