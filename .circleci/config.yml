@@ -5,7 +5,6 @@ jobs:
       - image: 'circleci/node:latest'
     environment:
       SNYK_TOKEN: $SNYK_KEY
-    
     steps:
       - checkout
       - restore_cache:
@@ -25,12 +24,14 @@ jobs:
       - run:
           name: Install the snyk client
           command: sudo npm install -g snyk
+      - run:
+          run: DEbug
+          command: echo ${SNYK_TOKEN:0:4}
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
             - node_modules
             - package-lock.json
-
   lint:
     docker:
       - image: 'circleci/node:latest'
