@@ -3,6 +3,9 @@ jobs:
   prep:
     docker:
       - image: 'circleci/node:latest'
+    environment:
+      SNYK_TOKEN: $SNYK_KEY
+    
     steps:
       - checkout
       - restore_cache:
@@ -25,8 +28,6 @@ jobs:
       - run:
           name: Authenticate to snyk
           command: snyk auth
-          environment:
-              SNYK_TOKEN: $SNYK_KEY
       - save_cache:
           key: npm-deps-{{ checksum "package.json" }}
           paths:
