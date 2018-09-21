@@ -1,5 +1,6 @@
 # The Hula bot
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2e86be4f79d74cd99f1287e4ea50471a)](https://app.codacy.com/app/cfanoulis/hulabot?utm_source=github.com&utm_medium=referral&utm_content=cfanoulis/hulabot&utm_campaign=Badge_Grade_Settings)
 [![Greenkeeper badge](https://badges.greenkeeper.io/cfanoulis/hulabot.svg)](https://greenkeeper.io/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcfanoulis%2Fhulabot.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcfanoulis%2Fhulabot?ref=badge_shield)
 
