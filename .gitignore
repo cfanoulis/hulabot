@@ -60,5 +60,4 @@ typings/
 # dotenv environment variables file
 .env
 
-
-configs/tokens-and-secrets.json
+src/modules/secure.js

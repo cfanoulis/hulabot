@@ -1,5 +1,7 @@
 console.log("HulaBot is starting");
 
+//Allocate variables
+let tokens;
 //Load dependencies
 const Discord = require("discord.js");
 const { promisify } = require("util");
@@ -7,9 +9,12 @@ const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 const fs = require("fs");
 
+//Load the secure element (nope, this is not on github :wink_wink:)
+const secureElement = require("./modules/secure"); //eslint-disable-line
+
 //Initialize the client and attach the enmaps (evie may god bless you with theese) and config
 const client = new Discord.Client();
-if (!process.env.TESTING) { client.config = require("./configs/config.js"); };
+if (!process.env.TESTING) { client.config = require("./configs/config.js"); }
 client.commands = new Enmap();
 client.aliases = new Enmap();
 client.settings = new Enmap({name: "settings", fetchAll: false, autoFetch: true});
@@ -17,9 +22,9 @@ client.asteroids = new Enmap({name: "asteroids"});
 client.allianceMembers = new Enmap({name: "GuildAllianceMembers"});
 
 //Gimme them keys
-if(!process.env.TESTING) {
+if (!process.argv[5]) {
 const contents = fs.readFileSync("./configs/tokens-and-secrets.json");
-const tokens = JSON.parse(contents);
+tokens = JSON.parse(contents);
 }
 
 //Custom logger (York this is amazing)
@@ -69,3 +74,8 @@ const init = async () => {
 };
 
 init();
+
+//But because we are cool, we have a shutdown command :smart:
+process.on("SIGTERM", () => {
+  require("./modules/shtudown").run();
+});
