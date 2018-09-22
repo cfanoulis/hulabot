@@ -23,7 +23,7 @@
     "bufferutil": "4.0.0",
     "chalk": "2.4.1",
     "discord.js": "github:hydrabolt/discord.js",
-    "enmap": "4.2.4",
+    "enmap": "4.3.0",
     "enmap-sqlite": "2.0.5",
     "erlpack": "github:discordapp/erlpack",
     "libsodium-wrappers": "0.7.3",
