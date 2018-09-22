@@ -5,7 +5,6 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Discord Chat](https://img.shields.io/discord/308323056592486420.svg?logo=discord)](https://discord.gg/EAtCV5a)
 [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)]()
-[![Issues](https://img.shields.io/github/issues-raw/JonSn0w/PlayMusic.svg)](https://github.com/cfanoulis/hulabot/issues) 
 [![GitHub stars](https://img.shields.io/github/stars/jonsn0w/playmusic.svg?style=social&label=Star)](https://github.com/cfanoulis/hulabot)
 
 A Deep-Town Discord bot that likes to dance. A lot.
