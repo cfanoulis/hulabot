@@ -9,6 +9,7 @@ A Deep-Town Discord bot that likes to dance. A lot.
 
 ## Join our discord server!
 <iframe src="https://discordapp.com/widget?id=484715871227346944&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
 ## What are we using
 Our licence is MIT, because we use this awesome boiler plate called [GuideBot](https://github.com/AnIdiotsGuide/guidebot).
 All credit for anything that comes from that goes to @YorkAARGH. Everything else is homemade by me.
