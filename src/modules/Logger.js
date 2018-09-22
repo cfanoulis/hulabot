@@ -1,7 +1,3 @@
-/**
- * @author AnIdiotsGuide
- * @license MIT
- */
 
 /*
 Logger class for easy and aesthetically pleasing console logging 
