@@ -1,7 +1,8 @@
-const { promisfy } = require("util");
-const unlinkFiles = promisfy(require("fs").unlinkFile);
+const utils = require("util");
+const delet = require("fs").unlink;
+const unlinkFiles = utils.promisify(delet);
 
-exports.run = async function() {
+module.exports = async function() {
     console.log("Initializing shutdown process...");
     unlinkFiles("../../configs/tokens.json").then(
         console.log("Tokens Cleared")
