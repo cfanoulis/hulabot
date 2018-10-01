@@ -24,7 +24,7 @@ async function aWizard(client, message) {
 }
 
     if (args.length < 1) return message.channel.send("Uhm, I need you to provide an asteroid code. Duh.");
-    if (client.asteroids.has(args[0])) return message.channel.send("Excuse me <@${message.author.id}>, but this asteroid already exists in our databases. Maybe try searching it?");
+    if (client.asteroids.has(args[0])) return message.channel.send(`Excuse me <@${message.author.id}>, but this asteroid already exists in our databases. Maybe try searching it`);
     if (args.length < 2) { aWizard(client, message); } else {
     template.baseResource = args[1];
     template.basePercentage = args[2];
