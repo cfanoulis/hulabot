@@ -8,6 +8,7 @@ const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 const fs = require("fs");
+const Idiot = require("idiotic-api");
 
 //Load the secure element (nope, this is not on github :wink_wink:)
 const secureElement = require("./modules/secure"); //eslint-disable-line
@@ -20,6 +21,7 @@ client.aliases = new Enmap();
 client.settings = new Enmap({name: "settings", fetchAll: false, autoFetch: true});
 client.asteroids = new Enmap({name: "asteroids"});
 client.allianceMembers = new Enmap({name: "GuildAllianceMembers"});
+client.idiotAPI = Idiot.Client(tokens.idiot)
 
 //Gimme them keys
 if (!process.argv[5]) {
