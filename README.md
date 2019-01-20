@@ -1,10 +1,10 @@
 # The Hula bot
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2e86be4f79d74cd99f1287e4ea50471a)](https://app.codacy.com/app/cfanoulis/hulabot?utm_source=github.com&utm_medium=referral&utm_content=cfanoulis/hulabot&utm_campaign=Badge_Grade_Settings)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Discord Chat](https://img.shields.io/discord/308323056592486420.svg?logo=discord)](https://discord.gg/EAtCV5a)
 [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)]()
 [![GitHub stars](https://img.shields.io/github/stars/jonsn0w/playmusic.svg?style=social&label=Star)](https://github.com/cfanoulis/hulabot)
+
+# This project is archived. It is hosted on github solely for posterity.
 
 A Deep-Town Discord bot that likes to dance. A lot.
 
